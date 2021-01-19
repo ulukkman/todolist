@@ -7,5 +7,10 @@
 </head>
 <body>
     <h2>Это тестовое заниятие</h2>
+    <div>Версия 2</div>
+    {% for todo in todo_list %}
+        <h3>{{ todo.text }} - {{ todo.created_at}}</h3>
+
+    {% endfor %}
 </body>
 </html>
