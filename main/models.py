@@ -15,4 +15,3 @@ class BookShop(models.Model):
     genre = models.CharField(max_length=10)
     author = models.CharField(max_length=10)
     year = models.CharField(max_length=10)
-    date = models.DateField(date_added=True)
