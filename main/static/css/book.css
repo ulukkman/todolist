@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1 {
+  color:  #f05a28;
+  font-size: 70px;
+  text-align: center;
+}
+span {
+  font-family: 'Poiret One', cursive;
+}
+
+.book-card {
+  margin: 5px;
+  width: 300px;
+  height: 500px;
+  background-color: #f05a28;
+  border: 1px solid #f05a28;
+  border-radius: 15px;
+}
+
+.for-padding {
+  padding: 5px;
+}
+
+.logo {
+  font-family: 'Poiret One', cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+.year {
+  text-align: center;
+}
+
+.price,
+.genre,
+.author {
+  text-align: right;
+  font-weight: bold;
+}
+
+.description {
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+}
+

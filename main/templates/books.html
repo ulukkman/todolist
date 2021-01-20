@@ -1,15 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/book.css">
 </head>
 <body>
-  <section class="book">
-    <div class="book-card">
-      <h1 class="title"></h1>
+    <div class="title">
+      <h1>Книжный магазин<span>"BookShop"</span></h1>
     </div>
-  </section>
+    <div class="container">
+      {% for book in book_shop %}
+      <section class="book-card">
+        <div class="for-padding">
+          <div class="logo">
+            <a href="#">BookShop</a>
+          </div>
+          <div class="content">
+            <h2 class="title">{{ book.title }}</h2>
+            <h3 class="subtitle">{{ book.subtitle }}</h3>
+            <p class="description">{{ book.description }}</p>
+            <p class="price">{{ book.price }}</p>
+            <p class="genre">{{ book.genre }}</p>
+            <p class="author">{{ book.author }}</p>
+            <p class="year">{{ book.year }}</p>
+          </div>     
+        </div>
+      </section>
+      {% endfor %}
+    </div>
 </body>
 </html>
