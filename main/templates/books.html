@@ -43,7 +43,18 @@
             <p class="genre">{{ book.genre }}</p>
             <p class="author">{{ book.author }}</p>
             <p class="year">{{ book.year }}</p>
-          </div>     
+          </div> 
+          <div class="book_item_footer">
+            <div class="book_action_buttons">
+              {% if book.is_favorite %}
+              <a href="{% url 'unmarked-book' book.id %}"><img src="{% static './icons/marked.png' %}"></a>
+              {% else %}
+              <a href="{% url 'marked-book' book.id %}"><img src="{% static './icons/unmarked.png' %}"></a>
+              {% endif %}
+
+              <a href="{% url 'delete-book' book.id %}"><img src="{% static './icons/deleted.png' %}"></a>
+            </div>
+          </div>    
         </div>
       </section>
       {% endfor %}

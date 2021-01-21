@@ -15,3 +15,5 @@ class bookShop(models.Model):
     genre = models.CharField(max_length=20)
     author = models.CharField(max_length=20)
     year = models.CharField(max_length=10)
+    is_favorite = models.BooleanField(default=False)
+
