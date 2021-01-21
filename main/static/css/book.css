@@ -19,7 +19,7 @@ span {
 }
 
 .book-card {
-  margin: 5px;
+  margin: 10px;
   width: 300px;
   height: 500px;
   background-color: #f05a28;
@@ -38,7 +38,7 @@ span {
 }
 
 .year {
-  text-align: center;
+  text-align: center; 
 }
 
 .price,
@@ -54,5 +54,14 @@ span {
 
 .container {
   display: flex;
+}
+
+.create_container {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  background-color: #f05a28;
+  border: 1px solid #f05a28;
+  border-radius: 15px;
 }
 

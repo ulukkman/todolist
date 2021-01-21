@@ -13,6 +13,21 @@
     <div class="title">
       <h1>Книжный магазин<span>"BookShop"</span></h1>
     </div>
+
+    <div class="create_container">
+      <form action="{% url 'add-books' %}" method="POST">
+          {% csrf_token %}
+          <input class="create_title" type="text" placeholder="Заголовок книги" name="title_text">
+          <input class="create_subtitle" type="text" placeholder="Подзаголовок книги" name="subtitle_text">
+          <input class="create_description" type="text" placeholder="Описание книги" name="description_text">
+          <input class="create_price" type="text" placeholder="Цена книги" name="price_text">
+          <input class="create_genre" type="text" placeholder="Жанр книги" name="genre_text">
+          <input class="create_author" type="text" placeholder="Автор книги" name="author_text">
+          <input class="create_year" type="text" placeholder="Год выхода книги" name="year_text">
+          <button class="create_button">Добавить книгу</button>
+      </form>
+    </div>
+
     <div class="container">
       {% for book in book_shop %}
       <section class="book-card">
