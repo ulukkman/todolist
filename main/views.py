@@ -72,3 +72,9 @@ def delete_book(request, id):
     book = bookShop.objects.get(id=id)
     book.delete()
     return redirect(books)
+
+def close_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_closed = not todo.is_closed
+    todo.save()
+    return redirect(test)
